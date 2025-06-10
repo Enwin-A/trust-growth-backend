@@ -6,7 +6,7 @@ import { analyzeRouter } from './routes/analyze';
 import { healthRouter } from './routes/health';
 
 const app = express();
-const PORT = process.env.PORT ?? 4000;
+const PORT = Number(process.env.PORT ?? 4000);
 
 
 const allowedOrigin = process.env.ALLOWED_ORIGIN || '*';
