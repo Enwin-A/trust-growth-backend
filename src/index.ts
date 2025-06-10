@@ -8,10 +8,14 @@ import { healthRouter } from './routes/health';
 const app = express();
 const PORT = process.env.PORT ?? 4000;
 
+
+const allowedOrigin = process.env.ALLOWED_ORIGIN || '*';
+
+app.use(cors({ origin: allowedOrigin }));
 // enabling the cors for frontend 
-app.use(cors({
-  origin: 'http://localhost:3000',
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+// }));
 
 // the middleware to parse JSON bodies
 app.use(express.json());

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import multer from 'multer';
-import { extractTextFromPdf } from '../services/pdfService';
+import { extractTextFromPdf } from '../services/pdfServices';
 import { scrapeUrlViaFirecrawl } from '../services/firecrawlClient';
 import {
   scoreTrust,
