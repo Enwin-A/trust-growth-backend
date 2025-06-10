@@ -35,6 +35,6 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Backend listening on http://localhost:${PORT}`);
 });
